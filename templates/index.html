@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cocktail App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div id="container">
+
+    <h1>Cocktail App</h1>
+
+    <form action="/results" method="GET">
+        <label>
+            <input type="text" name="search" placeholder="Search for a cocktail" autocomplete="off">
+        </label>
+        <button type="submit">search</button>
+    </form>
+
+    <h2>Popular Drinks</h2>
+    {% for drink in data %}
+    <a href="drink/{{ drink.strDrink }}"><div class="drink">
+        <h3>{{ drink.strDrink }}</h3>
+        <img src="{{ drink.strDrinkThumb }}" alt="no image :(">
+    </div></a>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>

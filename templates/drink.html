@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cocktail App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='drink.css') }}">
+</head>
+<body>
+<div id="container">
+
+    <div id="img"><a href="../"><img src="{{ response.strDrinkThumb }}" alt="no image :(" width="500px" height="500px"></a></div>
+
+    <div id="text_container">
+        <h1>{{ response.strDrink }}</h1>
+
+        <h2>Ingredients</h2>
+        <p>
+        {% for i in ingredients %}
+        {% if response[i] %}
+        Ingredient {{ loop.index }}: {{ response[measures[loop.index - 1]] or "" }} {{ response[i] }} <br>
+        {% endif %}
+        {% endfor %}
+        </p>
+
+        <h2>Glass type</h2>
+        <p>{{ response.strGlass }}</p>
+
+        <h2>Instructions</h2>
+        <p>{{ response.strInstructions }}</p>
+    </div>
+
+</div>
+</body>
+</html>

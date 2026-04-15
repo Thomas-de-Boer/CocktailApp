@@ -1,0 +1,16 @@
+html, body {
+    margin: 0;
+}
+
+#img {
+    margin-top: 5%;
+    margin-left: 5%;
+    float: left;
+}
+
+#text_container {
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 50%;
+    float: left;
+}

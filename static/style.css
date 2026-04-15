@@ -1,0 +1,45 @@
+html, body {
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    color: black;
+}
+
+#drinks-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.drink, .result_drink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f3f0ec;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+.drink img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.result_drink img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
