@@ -19,6 +19,7 @@
     </form>
 
     <div id="drinks-grid">
+    {% if response.drinks %}
     {% for drink in response.drinks %}
     <a href="drink/{{ drink.strDrink }}">
         <div class="result_drink">
@@ -27,6 +28,9 @@
         </div>
     </a>
     {% endfor %}
+    {% else %}
+    <h2>No Results Sorry</h2>
+    {% endif %}
 </div>
 
 </div>
